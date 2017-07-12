@@ -25,4 +25,5 @@ if (p1Choice == p2Choice) {
 } else if (p1Choice === "paper") {
     if(p2Choice === "scissors") {
         console.log("Player one loses");
-        conosle.log("Player two wins")
+        console.log("Player two wins");
+    }

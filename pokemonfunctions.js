@@ -6,7 +6,17 @@ console.log(randLetter());
 
 function randWord(){
    //Write a function called randWord() that returns a string of random length of random letters
+   var wordLength = Math.floor(Math.random()*10)+1
+   var ranWord = ""
 
-   var wordLength = Math.floor(Math.random()*10)
-   return wordLength = 
+   for (var i=0;i<wordLength;i++) {
+      ranWord += randLetter()
+   }
+return ranWord 
 }
+console.log(randWord());
+
+function randSentence(){
+//Write a function called randSentence() that returns a string of a random number of random words 
+//separated by a space and ending with a period. The first letter should be capitalized.
+var 
