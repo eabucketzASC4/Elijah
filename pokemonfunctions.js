@@ -19,4 +19,6 @@ console.log(randWord());
 function randSentence(){
 //Write a function called randSentence() that returns a string of a random number of random words 
 //separated by a space and ending with a period. The first letter should be capitalized.
-var 
+var sentencelength = Math.floor(Math.random()*10)+2
+var ranSentence = ""
+}
