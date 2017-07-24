@@ -1,0 +1,14 @@
+body{
+    background:url("https://cdn.vox-cdn.com/uploads/chorus_image/image/55832883/694348338.0.jpg");
+    background-size: cover;
+    margin:200px;
+    font-family:Arial;
+    color: black;
+  }
+p{
+    width: 300px;
+    height: 100px;
+    border: 1px solid blue;
+    box-sizing: border-box;
+}
+    
