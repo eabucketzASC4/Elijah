@@ -19,7 +19,7 @@ body {
 .text-vertical-center {
     display: table-cell;
     text-align: center;
-    vertical-align: middle;
+    vertical-align: top;
 }
 
 .text-vertical-center h1 {
@@ -247,4 +247,7 @@ footer {
   position: fixed;
   bottom: 5px;
   right: 5px;
+}
+h1 {
+    color:white
 }
