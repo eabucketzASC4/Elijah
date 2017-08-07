@@ -26,3 +26,9 @@ input {
     font-size:40px;
     }
 }
+#pcm-c {
+    height:400px;
+}
+#loginrequired {
+    display: none;
+}
