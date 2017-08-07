@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src = "main.js"></script>
+		<link rel="stylesheet" href="style.css"> 
+		<link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+		<img src="http://geology.com/articles/difficult-rocks/difficult-rock-identification.jpg" rel="stylesheet">
+        <!--class="header-->
+			<div class="container">
+				<h1><span class="rock">ROCK!</span>, <span class="paper">PAPER!</span>, <span class="scissors">SCISSORS!<span class="shoot">, SHOOT!</span></h1>
+			</div>
+    </head>
+	 <body>
+         <div class="main">
+			<div class="container">
+				<section class="content">
+					<button class="play rock" type="button" onclick="play('rock')">rock</button>
+					<button class="play paper" type="button" onclick="play('paper')">paper</button>
+					<button class="play scissors" type="button" onclick="play('scissors')">scissors</button>
+					<div style="clear:both;"></div>
+					<p><span id="player"></span> <span id="opponent"></span></p>
+					<h2 id="results"></h2>
+				</section>
+				<aside class="aside">
+					<div class="scorebox">
+						<h2>Score</h2>
+						<div class="score-num"><span id="wins">0</span> <br />wins</div>
+						<div class="score-divider"><span>-</span></div>
+						<div class="score-num"><span id="loses">0</span> <br />loses</div>
+					</div>
+					<button type="reset" id="reset" onclick="reset()">reset scores</button>
+				</aside>
+			</div>
+		</div>
+        </body>
+</html>
