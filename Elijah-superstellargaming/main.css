@@ -1,4 +1,42 @@
-.thumbnail{
-    height:700px;
-    overflow: hidden;
+body{
+    background-color: lightskyblue;
 }
+#container{
+    background-color: silver;
+}
+h1{
+    font-family: 'Monofett', cursive;
+    background-color: white;
+    color: black;
+}
+div{
+    font-family: 'Rajdhani', sans-serif;
+}
+nav{
+    background-color: white;
+    text-align: left;
+    color: black;
+}
+h2{
+    background-color: white;
+    font-family: 'Audiowide', cursive;
+    color: black;
+}
+ .thumbnail{
+    height:540px;
+    width:400px;
+    text-align: center;
+}
+img {
+    max-height: 200px;
+    width: 500px;
+    text-align:center;
+}
+ul{
+     list-style-image: url('sqpurple.gif');
+}
+    h3{
+        background-color:silver;
+        text-align: center;
+        font-family: 'Orbitron', sans-serif;
+    }
