@@ -1,4 +1,11 @@
+var username = 'Elijah';
+var username = prompt("What is your name?");
+firebase.database().ref(username).set({
+	"score": 0
+});
+
 var loses = 0;
+//var database = firebase.database().ref();
 var wins = 0;
 			
 var play = function(userChoice) {
@@ -79,11 +86,30 @@ var play = function(userChoice) {
 					if (loses > 999) {
 						alert("Your opponent reached the max score of 999. <br />We're sorry, you have no life.");
 					}
+					sendNewScore()
 			};
+function sendNewScore() {
+	let userInfo = firebase.database().ref(username);
+	
 
+	userInfo.set({
+		"score": wins
+	});
+}
 var reset = function() {
 	loses = 0;
 	wins = 0;
 	document.getElementById("wins").innerHTML=wins;
 	document.getElementById("loses").innerHTML=loses;
 };
+
+//Show data
+var database = firebase.database().ref()
+database.on("child_added", function(rowData) {
+	console.log(rowData.score)
+		$("#all-scores").append("<div>"+rowData.key+" got "+rowData.val().score+"</div>");
+	
+	}
+)
+
+ 

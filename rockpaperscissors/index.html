@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src = "main.js"></script>
 		<link rel="stylesheet" href="style.css"> 
 		<link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-		<img src="http://geology.com/articles/difficult-rocks/difficult-rock-identification.jpg" rel="stylesheet">
-		<img src="http://cdn.dick-blick.com/items/102/40/10240-1009-1-2ww-m.jpg" rel="stylesheet">
-		<img src="http://www2.fiskars.com/var/fiskars_amer/storage/images/frontpage2/products/crafting-and-sewing/scissors-and-shears/non-stick-detail-scissors-no.-5/14334-16-eng-US/Non-stick-Detail-Scissors-No.-5.jpg" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC4ZcDOJVDhDvdgZ6KZ5JcY-Tju9GOaRDg",
+    authDomain: "rock-9be48.firebaseapp.com",
+    databaseURL: "https://rock-9be48.firebaseio.com",
+    projectId: "rock-9be48",
+    storageBucket: "",
+    messagingSenderId: "979891362203"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src = "main.js"></script>
+	
+        
 		<!--class="header-->
 			<div class="container">
 				<h1><span class="rock">ROCK!</span>, <span class="paper">PAPER!</span>, <span class="scissors">SCISSORS!<span class="shoot">, SHOOT!</span></h1>
+			
 			</div>
     </head>
 	 <body>
          <div class="main">
 			<div class="container">
 				<section class="content">
-					<button class="play rock" type="button" onclick="play('rock')">rock</button>
-					<button class="play paper" type="button" onclick="play('paper')">paper</button>
-					<button class="play scissors" type="button" onclick="play('scissors')">scissors</button>
+					<button id = "rock" class="play rock" type="button" onclick="play('rock')"></button>
+					<button id ="paper" class="play paper" type="button" onclick="play('paper')"></button>
+					<button id = "scissors" class="play scissors" type="button" onclick="play('scissors')"></button>
 					<div style="clear:both;"></div>
 					<p><span id="player"></span> <span id="opponent"></span></p>
 					<h2 id="results"></h2>
@@ -30,10 +47,14 @@
 						<div class="score-num"><span id="wins">0</span> <br />wins</div>
 						<div class="score-divider"><span>-</span></div>
 						<div class="score-num"><span id="loses">0</span> <br />loses</div>
-					</div>
+						</div>
+					<div class = "leader">
+						</div>
 					<button type="reset" id="reset" onclick="reset()">reset scores</button>
-				</aside>
+		<div id = "all-scores">
 			</div>
-		</div>
+				</aside>
+			</div> <!-- ends container -->
+		</div> <!-- ends main -->
         </body>
 </html>
