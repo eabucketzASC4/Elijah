@@ -1,14 +1,13 @@
-var username = 'Elijah';
-var username = prompt("What is your name?");
+let username = prompt("What is your name?");
 firebase.database().ref(username).set({
 	"score": 0
 });
 
-var loses = 0;
+let loses = 0;
 //var database = firebase.database().ref();
-var wins = 0;
+let wins = 0;
 			
-var play = function(userChoice) {
+const play = (userChoice) => {
 					
 					document.getElementById("player").innerHTML="";
 					document.getElementById("opponent").innerHTML="";
@@ -25,7 +24,7 @@ var play = function(userChoice) {
 						return false;
 					}
 				
-					var computerChoice = Math.random();
+					let computerChoice = Math.random();
 					if (computerChoice < 0.34) {
 						computerChoice = "rock";
 					} else if(computerChoice <= 0.67) {
@@ -36,7 +35,7 @@ var play = function(userChoice) {
 				 
 				 	document.getElementById("opponent").innerHTML='// Your opponent chose' + ' ' + computerChoice + '.';
 				 
-					 var compare = function (choice1,choice2) {
+					 const compare = (choice1,choice2) => {
 						if (choice1 == choice2) {
 							return "The result is a tie!";
 						} else if (choice1 == "rock"){
@@ -71,7 +70,7 @@ var play = function(userChoice) {
 						}
 					};
 
-					var winner = compare(userChoice,computerChoice);
+					let winner = compare(userChoice,computerChoice);
 					document.getElementById("results").innerHTML=winner;
 					document.getElementById("wins").innerHTML=wins;
 					document.getElementById("loses").innerHTML=loses;
@@ -96,7 +95,7 @@ function sendNewScore() {
 		"score": wins
 	});
 }
-var reset = function() {
+const reset = () => {
 	loses = 0;
 	wins = 0;
 	document.getElementById("wins").innerHTML=wins;
@@ -104,10 +103,10 @@ var reset = function() {
 };
 
 //Show data
-var database = firebase.database().ref()
+let database = firebase.database().ref()
 database.on("child_added", function(rowData) {
 	console.log(rowData.score)
-		$("#all-scores").append("<div>"+rowData.key+" got "+rowData.val().score+"</div>");
+		$("#all-scores").append("<div>"+rowData.key+" : "+rowData.val().score+"</div>");
 	
 	}
 )
