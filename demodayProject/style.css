@@ -171,4 +171,12 @@ input:focus {
     margin-right: 20px;
   }
 }
+.Products .card{
+  width:250px;
+  padding: 30px;
+}
 
+.Products {
+  display:flex;
+  flex-flow: row wrap;
+}
