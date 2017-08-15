@@ -1,4 +1,4 @@
-* {
+ {
   box-sizing: border-box;
 }
  
@@ -169,7 +169,7 @@ input:focus {
   }
   .buttons {
     margin-right: 20px;
-  }
+  } 
 }
 .Products .card{
   width:250px;
