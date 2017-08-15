@@ -1,3 +1,11 @@
+var shoppingCart =[];
+function addtocart(product,money){
+    shoppingCart.push(product)
+    console.log(shoppingCart);
+    $("#list").append("<li>" +product+" $"+money+"</li>")
+}
+
+
 function setup(){
   
     $("#searching").submit(function(e){
@@ -31,7 +39,7 @@ function search() {
           let nem = info.product_name
           let price = info.product_lowest_price;
           let imag = info.product_images[0];
-          let retailer= info.product_lowest_price;
+          let retailer= info.product_store;
           let plist= info.stores;
           for (var i = 0;i<plist.length;i++){
               console.log(plist[i]);
@@ -43,23 +51,23 @@ function search() {
             <div class="card-content">
               <span class="card-title black-text">${nem}</span>
               <p><i class="material-icons">add</i>n</p> <h2 class = "retailer">${retailer}</h2>
-              <button>add to cart</button>
+              <button onclick="addtocart('${nem}',200)">add to cart</button>
            
           </div>`
-              )
-          }
-          $('.Products').append(
-            `<div class = "card">
-            <div class="card-image">
-              <img class = "prod_img" src="${imag}">
-            </div>
-            <div class="card-content">
-              <span class="card-title black-text">${nem}</span>
-              <p><i class="material-icons">add</i>${price}</p> <h2 class = "retailer">${retailer}</h2>
+              ) // append
+          } // for loop
+        //   $('.Products').append(
+        //     `<div class = "card">
+        //     <div class="card-image">
+        //       <img class = "prod_img" src="${imag}">
+        //     </div>
+        //     <div class="card-content">
+        //       <span class="card-title black-text">${nem}</span>
+        //       <p><i class="material-icons">add</i>${price}</p> <h2 class = "retailer">${retailer}</h2>
            
-          </div>`
-          )
-      }
+        //   </div>`
+        //   )
+      } // function(data)
     )
 }
 
