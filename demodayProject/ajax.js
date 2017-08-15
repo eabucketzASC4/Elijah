@@ -1,3 +1,4 @@
+// add to cart function
 var shoppingCart =[];
 function addtocart(product,money){
     shoppingCart.push(product)
@@ -5,7 +6,7 @@ function addtocart(product,money){
     $("#list").append("<li>" +product+" $"+money+"</li>")
 }
 
-
+// searching function
 function setup(){
   
     $("#searching").submit(function(e){
@@ -15,7 +16,7 @@ function setup(){
 }
 
 
-
+// search bar function
 function search() {
     var search = $("#searchbar").val();
     console.log(search);
@@ -26,7 +27,6 @@ function search() {
             console.log(data);
             
         });
-
 
 
 
@@ -51,9 +51,21 @@ function search() {
             <div class="card-content">
               <span class="card-title black-text">${nem}</span>
               <p><i class="material-icons">add</i>n</p> <h2 class = "retailer">${retailer}</h2>
-              <button onclick="addtocart('${nem}',200)">add to cart</button>
+            
+            
+            
+            
+            
+    
+              <a onclick="addtocart('${nem}',200)" class="waves-effect waves-light btn"><i class="material-icons left">add_shopping_cart</i>add to cart</a>
            
-          </div>`
+       
+       
+       
+       
+       
+       
+              </div>`
               ) // append
           } // for loop
         //   $('.Products').append(
