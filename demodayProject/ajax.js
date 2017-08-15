@@ -26,6 +26,7 @@ function setup(){
             <div class="card-content">
               <span class="card-title black-text">${nem}</span>
               <p><i class="material-icons">add</i>n</p> <h2 class = "retailer">${retailer}</h2>
+              <button>add to cart</button>
            
           </div>`
               )
