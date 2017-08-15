@@ -1,9 +1,9 @@
 function search() {
     var database = firebase.database().ref();
-    var search = $("#search").val();
+    var search = $("#searchbar").val();
    console.log(search);
     var data = {
-        "search": search,
+        "searchbar": search,
     }
     database.push(data);
     }

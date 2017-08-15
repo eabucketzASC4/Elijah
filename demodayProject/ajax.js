@@ -1,11 +1,28 @@
 function setup(){
-    // productName="Samsung";
-    // $.getJSON("https://price-api.datayuge.com/api/v1/compare/?apikey=RzQF3I2gTT7N4iWvBO3SKc1MUhy3t0JiGKZ&product="+productName,
+  
+    $("#searching").submit(function(e){
+        e.preventDefault();
+        search()
+    })
+}
+
+
+
+function search() {
+    var search = $("#searchbar").val();
+    console.log(search);
+    productName=$("#searchbar").val();
+    $.getJSON("https://price-api.datayuge.com/api/v1/compare/?apikey=RzQF3I2gTT7N4iWvBO3SKc1MUhy3t0JiGKZ&product="+productName,
         
-    //     function(data) {
-    //         console.log(data);
+        function(data) {
+            console.log(data);
             
-    //     });
+        });
+
+
+
+
+
     $.getJSON(
       "https://price-api.datayuge.com/api/v1/compare/detail?id=ZToxMjIyNA&api_key=TLHyGyOHvYVRxIeEgubFti0thQPGSMLHeeU",
       function(data) {
@@ -46,6 +63,8 @@ function setup(){
     )
 }
 
+
+
 $(document).ready(setup);
 // var unirest = require('unirest');
 
@@ -57,3 +76,4 @@ $(document).ready(setup);
 //   console.log(result.status, result.headers, result.body);
 // });
 // })
+
