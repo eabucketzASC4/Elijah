@@ -1,11 +1,17 @@
 // add to cart function
 var shoppingCart =[];
+let totalprice =0;
 function addtocart(product,money,image){
     shoppingCart.push(product)
+ // new console.log
     console.log("+image "+image);
-   $("#shoplist").append("<tr><td><img class ='pimage' src =' "+image+ "'</td><td>" +product+" $"+money+"</td></tr>")
+ // new #shoplist
+    $("#shoplist").append("<tr><td><img class ='pimage' src =' "+image+ "'</td><td>" +product+"</td><td> $"+money+"</td></tr>")
+  // total price stuff (all 3 lines)
+    totalprice+=money
+   console.log(totalprice)
+   $('.totalprice').empty().append(totalprice);
    
-    
 }
 
 function setup(){
@@ -48,20 +54,22 @@ function search(){
                   for (nom in store){
                     if(Object.keys(store[nom]).length>0){//checks if sold by that retailer (if retailer info is present in the array)
                     // console.log(store);
-                     let price = store[nom].product_price;//price of each object
+                     let price =Number( store[nom].product_price);//price of each object
                      console.log(price);
                     //  if(lowest_price == price){
                         $('.Products').append(
                             `<section>
                             <div class = "card">
                               <div class="card-image">
-                                <img class = "prod_img" src="${imag}">
+                                
+                              <img class = "prod_img" src="${imag}">
                               </div>
                               <div class="card-content">
                                 <p><span class="card-title black-text">${nem}</span></p>
                                 <img src = "${store[nom].product_store_logo}">
                                 <p>₹${price}</p>
-                                 <a onclick="addtocart('${nem}',${price},'${imag}')" class="waves-effect waves-light btn"><i class="material-icons left">add_shopping_cart</i>add to cart</a>
+
+                                <a onclick="addtocart('${nem}',${price},'${imag}')" class="waves-effect waves-light btn"><i class="material-icons left">add_shopping_cart</i>add to cart</a>
                               </div>
                             </div>
                             </section>`
