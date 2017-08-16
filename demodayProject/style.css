@@ -8,5 +8,6 @@
   flex-flow: row wrap;
 }
 #shoppingcartlist{
-  min-height: 775px;
+  min-height: 400px;
+  
 }

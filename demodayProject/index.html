@@ -1,58 +1,56 @@
+<!DOCTYPE html>
 <html>
     <head>
-    
-      <!-- Compiled and minified CSS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
- <link rel="stylesheet" href="style.css"></link>
- <script src ="ajax.js"></script>
- <script src="main.js>"></script>
+      <meta charset="UTF-8">
+        <title> Shopping Cart</title>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
         <link rel= "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="ajax.js"></script>
 
 
- <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
-        </head>
-        <body>
-            <nav>
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo"><i class="material-icons">cloud</i>TEM Shop</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#shoppingcartlist"><i class="material-icons">add_shopping_cart</i></a></li>
-        <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
-        <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
-      </ul>
-    
-    </div>
-  </nav>
-   <nav id= "search" class="white">
-    <div class="nav-wrapper">
-      <!--make sure this is here  -->
-      <form id ="searching">
-        <div class="input-field">
-        <!--make sure this is here  -->
-          <input id="searchbar" type="search" required>
-          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-          <i class="material-icons">close</i>
+        <link href="https://fonts.googleapis.com/css?family=Neucha" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="style.css" rel ="stylesheet" type = "text/css" />
+    </head>
+    <body>
+       <div class="navbar-fixed">       
+      <nav class="teal">
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo"><i class="material-icons">donut_small</i>TEM Shop</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#shoppingcartlist"><i class="material-icons">shopping_cart</i></a></li>
+            <li><a href="index.html"><i class="material-icons">refresh</i></a></li>
+          </ul>
         </div>
-      </form>
-    </div>
-  </nav>
+      </nav>
+      </div>
+      <nav id= "search" class="white">
+        <div class="nav-wrapper">
+          <form id ="searching">
+            <div class="input-field">
+              <input id="searchbar" type="search" required>
+              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+            </div>
+          </form>
+        </div>
+      </nav>
         <div class = "Products">
+
         </div>
-        <!--Cart  -->
-        <div id = "shoppingcartlist">
-          <p> Your cart </p>
+         <div id = "shoppingcartlist">
+           
+            <h1> Your cart </h1>
+           <table class="striped teal"> 
+             <!-- <thead>
+               <tr>
+                 <th>item</th>
+                 </tr>
+               </thead> -->
+                 <tbody id = "shoplist">                    
+                   </tbody>
+           </table>
           <ol id = "list"></ol>
           </div>
-</body>
-        </html>
-
-         <!--
-      Sizes:
-      tiny: 1rem
-      small: 2rem
-      medium: 4rem
-      large: 6rem
-      -->
-     
+    </body>
+</html>
