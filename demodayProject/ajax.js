@@ -1,9 +1,11 @@
 // add to cart function
 var shoppingCart =[];
-function addtocart(product,money){
+function addtocart(product,money,image){
     shoppingCart.push(product)
-    console.log(shoppingCart);
-    $("#shoplist").append("<tr><td>" +product+" $"+money+"</td></tr>")
+    console.log("+image "+image);
+   $("#shoplist").append("<tr><td><img class ='pimage' src =' "+image+ "'</td><td>" +product+" $"+money+"</td></tr>")
+   
+    
 }
 
 function setup(){
@@ -59,7 +61,7 @@ function search(){
                                 <p><span class="card-title black-text">${nem}</span></p>
                                 <img src = "${store[nom].product_store_logo}">
                                 <p>₹${price}</p>
-                                 <a onclick="addtocart('${nem}',${price})" class="waves-effect waves-light btn"><i class="material-icons left">add_shopping_cart</i>add to cart</a>
+                                 <a onclick="addtocart('${nem}',${price},'${imag}')" class="waves-effect waves-light btn"><i class="material-icons left">add_shopping_cart</i>add to cart</a>
                               </div>
                             </div>
                             </section>`

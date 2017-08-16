@@ -11,3 +11,12 @@
   min-height: 400px;
   
 }
+.pimage{
+  max-height: 100px;
+}
+.prod_img{
+  height:150px;
+}
+.card {
+  min-height: 550px;
+}
